@@ -1,0 +1,65 @@
+@use '$/vars';
+
+.main {
+	min-height: 100vh;
+	background: vars.$dull;
+
+	.notice {
+		color: red;
+		font-size: 2em;
+		margin-left: 2em;
+		margin-top: 1em;
+	}
+
+	.member-card {
+		display: flex;
+		margin: 0 2em;
+		padding: 2em;
+		gap: 2em;
+
+		.picture-wrapper {
+			display: block;
+			position: relative;
+			height: 16em;
+			width: 16em;
+			overflow: hidden;
+
+			.picture {
+				display: block;
+				position: absolute;
+				width: 100%;
+			}
+		}
+
+		.text {
+			padding: 1em;
+
+			.name {
+				color: white;
+				font-size: 3em;
+				margin: 0;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			.position {
+				margin: 0;
+				color: white;
+
+				.linkedin {
+					margin-left: 2ch;
+					color: white;
+				}
+			}
+
+			.desc {
+				font-size: 1.25em;
+				color: white;
+				text-indent: 1em;
+			}
+		}
+	}
+}

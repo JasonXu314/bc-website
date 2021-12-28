@@ -1,0 +1,36 @@
+@use './vars';
+
+.main {
+	height: 100vh;
+	background: vars.$dull;
+
+	.content {
+		padding: 1em;
+
+		.form {
+			padding: 1em;
+			background: white;
+			width: fit-content;
+
+			.title {
+				margin: 0.25em 0.5em;
+				color: vars.$cont;
+			}
+
+			.textarea {
+				padding: 0.5em;
+				font-family: Arial, Helvetica, sans-serif;
+				margin-left: 0.5em;
+				display: block;
+			}
+
+			.error {
+				color: red;
+			}
+
+			.success {
+				color: green;
+			}
+		}
+	}
+}

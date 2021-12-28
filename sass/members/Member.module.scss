@@ -1,0 +1,55 @@
+@use '$/vars';
+
+.main {
+	width: 100vw;
+	height: 100vh;
+	background: vars.$dull;
+
+	.card {
+		padding: 4em;
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		gap: 2em;
+
+		.picture-wrapper {
+			display: block;
+			position: relative;
+			width: 16em;
+			height: 16em;
+			overflow: hidden;
+
+			.picture {
+				display: block;
+				position: absolute;
+				width: 100%;
+			}
+		}
+
+		.text {
+			padding: 1em;
+
+			.name {
+				color: white;
+				font-size: 3em;
+				margin: 0;
+				text-decoration: none;
+			}
+
+			.position {
+				margin: 0;
+				color: white;
+
+				.linkedin {
+					margin-left: 2ch;
+					color: white;
+				}
+			}
+
+			.desc {
+				font-size: 1.25em;
+				color: white;
+				text-indent: 1em;
+			}
+		}
+	}
+}

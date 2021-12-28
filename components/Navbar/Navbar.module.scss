@@ -1,0 +1,71 @@
+@use '../../sass/vars';
+
+.main {
+	display: flex;
+	background: vars.$main;
+	flex-direction: row;
+	height: 3.75em;
+	position: relative;
+
+	.logo-link {
+		display: block;
+
+		.logo {
+			display: block;
+			height: 100%;
+			padding: 0 1em;
+		}
+	}
+
+	.list {
+		display: flex;
+		flex-direction: row;
+		margin: 0;
+		padding: 0;
+		z-index: 2;
+
+		.chevron-buffer {
+			position: relative;
+			height: 3.75em;
+			display: block;
+
+			.chevron {
+				height: 3.75em;
+				display: block;
+				margin: auto;
+			}
+		}
+
+		.link {
+			list-style: none;
+			background: vars.$main;
+
+			.link-text {
+				display: block;
+				color: white;
+				font-size: larger;
+				padding: 1em;
+				text-decoration: none;
+				font-family: vars.$main-font;
+			}
+
+			&:hover {
+				background: vars.$cont;
+			}
+		}
+
+		@media screen and (max-width: 450px) {
+			display: flex;
+			flex-direction: column;
+			overflow: visible;
+
+			&.closed {
+				overflow: hidden;
+			}
+		}
+	}
+
+	@media screen and (max-width: 450px) {
+		justify-content: space-between;
+	}
+}

@@ -1,0 +1,99 @@
+@use './vars';
+
+.main {
+	height: 100vh;
+	background: vars.$dull;
+	overflow-y: scroll;
+
+	.section {
+		position: relative;
+		height: 100vh;
+		box-sizing: border-box;
+		background-size: cover;
+
+		.inner {
+			position: absolute;
+			top: 25%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: grid;
+			grid-template-columns: 1fr auto;
+			gap: 8em;
+			padding: 2em;
+			width: 80vw;
+			backdrop-filter: opacity(0) blur(0);
+			transition: all 1s ease-in-out;
+
+			.heading {
+				color: transparentize(vars.$cont, 1);
+				margin: 0.25em 0;
+				font-size: 9em;
+				margin: 16px;
+				transition: all 1s ease-in-out;
+			}
+
+			.text {
+				color: transparentize(white, 1);
+				margin: auto;
+				font-size: 2em;
+				transition: all 1s ease-in-out;
+			}
+
+			.date {
+				font-size: 3em;
+				color: transparentize(vars.$sec, 1);
+				transition: all 1s ease-in-out;
+			}
+		}
+
+		&.active {
+			.inner {
+				top: 50%;
+				backdrop-filter: opacity(1) blur(16px);
+
+				.heading {
+					color: vars.$cont;
+				}
+
+				.text {
+					color: white;
+				}
+
+				.date {
+					color: vars.$sec;
+				}
+			}
+		}
+
+		&.section-1 {
+			height: calc(100vh - 3.75em);
+			background-image: url('/meeting.jpg');
+			background-position: 0 25%;
+		}
+
+		&.section-2 {
+			background-image: url('/first-cards.jpg');
+			background-position: 0 50%;
+		}
+
+		&.section-3 {
+			background-image: url('/post-second-drop.jpg');
+			background-position: 0 50%;
+		}
+
+		&.section-4 {
+			background-image: url('/first-rig.jpg');
+			background-position: 0 75%;
+		}
+
+		&.section-5 {
+			background-image: url('/fes.jpg');
+			background-position: 0 50%;
+		}
+
+		&.section-6 {
+			background-image: url('/rig.jpg');
+			background-position: 0 15%;
+		}
+	}
+}
