@@ -36,13 +36,6 @@ const Carousel: React.FC = () => {
 
 	return (
 		<div className={styles.main}>
-			<video
-				ref={(elem) => (videoRef.current = elem)}
-				className={styles.carousel + (imgIdx === 0 ? ' ' + styles.active : '')}
-				title={imgIdx === 0 ? 'Building 2060Ti Rig' : undefined}
-				muted>
-				<source src="timelapse.mp4" type="video/mp4" />
-			</video>
 			{images.map((image, i) => (
 				<img
 					key={i}

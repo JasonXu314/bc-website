@@ -36,16 +36,24 @@ const Calculator: NextPage = () => {
 	const powerCosts = useMemo<Payouts | null>(
 		() =>
 			wattage
-				? { payoutUSD: wattage * 24 * daysInMonth(month) * getRate(month), payoutETH: (wattage * 24 * daysInMonth(month) * getRate(month)) / ethPrice! }
+				? {
+						payoutUSD: wattage * 24 * daysInMonth(month) * getRate(month),
+						payoutETH: (wattage * 24 * daysInMonth(month) * getRate(month)) / ethPrice!
+				  }
 				: null,
 		[wattage, ethPrice, month]
 	);
-	const toInvestors = useMemo<Payouts | null>(() => (payouts ? { payoutUSD: payouts.payoutUSD * 0.72, payoutETH: payouts.payoutETH * 0.72 } : null), [payouts]);
+	const toInvestors = useMemo<Payouts | null>(
+		() => (payouts ? { payoutUSD: payouts.payoutUSD * 0.72, payoutETH: payouts.payoutETH * 0.72 } : null),
+		[payouts]
+	);
 
 	useEffect(() => {
-		axios.get<EthPriceResponse>(`https://api.etherscan.io/api?module=stats&action=ethprice&apikey=${process.env.NEXT_PUBLIC_ETHERSCAN_TOKEN}`).then((res) => {
-			setEthPrice(Number(res.data.result.ethusd));
-		});
+		axios
+			.get<EthPriceResponse>(`https://api.etherscan.io/api?module=stats&action=ethprice&apikey=${process.env.NEXT_PUBLIC_ETHERSCAN_TOKEN}`)
+			.then((res) => {
+				setEthPrice(Number(res.data.result.ethusd));
+			});
 	}, []);
 
 	return (
@@ -126,7 +134,8 @@ const Calculator: NextPage = () => {
 										<h4>{holder.name}</h4>
 									</td>
 									<td>
-										${(toInvestors!.payoutUSD * holder.owned + (holder.name === 'Jacob Stolker' ? 0.03 * payouts.payoutUSD : 0)).toFixed(6)}
+										$
+										{(toInvestors!.payoutUSD * holder.owned + (holder.name === 'Jacob Stolker' ? 0.03 * payouts.payoutUSD : 0)).toFixed(6)}
 									</td>
 									<td>
 										{(toInvestors!.payoutETH * holder.owned + (holder.name === 'Jacob Stolker' ? 0.03 * payouts.payoutETH : 0)).toFixed(6)}

@@ -34,7 +34,7 @@ export function daysInMonth(month: number): number {
 }
 
 export function getRate(month: number): number {
-	return month < 10 && month >= 5 ? 0.118 : 0.05;
+	return month < 10 && month >= 5 ? 0.1269 : 0.05;
 }
 
 export function validateEmail(email: string): boolean {
