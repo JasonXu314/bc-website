@@ -44,7 +44,12 @@ const Calculator: NextPage = () => {
 		[wattage, ethPrice, month]
 	);
 	const toInvestors = useMemo<Payouts | null>(
-		() => (payouts ? { payoutUSD: payouts.payoutUSD * 0.72, payoutETH: payouts.payoutETH * 0.72 } : null),
+		() =>
+			payouts
+				? powerCosts!.payoutUSD / payouts.payoutUSD > 0.25
+					? { payoutUSD: payouts.payoutUSD - powerCosts!.payoutUSD, payoutETH: payouts.payoutETH - powerCosts!.payoutETH }
+					: { payoutUSD: payouts.payoutUSD * 0.72, payoutETH: payouts.payoutETH * 0.72 }
+				: null,
 		[payouts]
 	);
 
