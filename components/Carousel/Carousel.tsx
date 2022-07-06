@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './Carousel.module.scss';
 
 const images = [
@@ -11,23 +11,13 @@ const images = [
 
 const Carousel: React.FC = () => {
 	const [imgIdx, setImgIdx] = useState<number>(0);
-	const videoRef = useRef<HTMLVideoElement | null>(null);
 
 	useEffect(() => {
 		const newIdx = (imgIdx + 1) % (images.length + 1);
 
-		const interval =
-			imgIdx === 0
-				? setTimeout(() => {
-						setImgIdx(newIdx);
-						videoRef.current!.currentTime = 0;
-				  }, 50_000)
-				: setTimeout(() => {
-						setImgIdx(newIdx);
-				  }, 5000);
-		if (imgIdx === 0) {
-			videoRef.current!.play();
-		}
+		const interval = setTimeout(() => {
+			setImgIdx(newIdx);
+		}, 5000);
 
 		return () => {
 			clearTimeout(interval);
