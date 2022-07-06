@@ -158,8 +158,12 @@ const Calculator: NextPage = () => {
 								<td>
 									<h4>Operating Fund</h4>
 								</td>
-								<td>${(payouts.payoutUSD * 0.25 - powerCosts!.payoutUSD).toFixed(6)}</td>
-								<td>{(payouts.payoutETH * 0.25 - powerCosts!.payoutETH).toFixed(6)}</td>
+								<td>
+									${(payouts.payoutUSD * 0.25 - powerCosts!.payoutUSD < 0 ? 0 : payouts.payoutUSD * 0.25 - powerCosts!.payoutUSD).toFixed(6)}
+								</td>
+								<td>
+									{(payouts.payoutETH * 0.25 - powerCosts!.payoutETH < 0 ? 0 : payouts.payoutETH * 0.25 - powerCosts!.payoutETH).toFixed(6)}
+								</td>
 								<td
 									className={styles.address}
 									onClick={() => {
