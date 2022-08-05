@@ -6,7 +6,8 @@ export default [
 		shortDescription: 'Avid computer hardware expert, and crypto enthusiast.',
 		description: `Jacob is a Computer Science student at University of Illinois at Urbana-Champaign. He specializes in computer hardware and engineering. He has years of experience custom-building his own computer setups, and has assisted numerous colleges in doing so. Additionally he is a published author in the field of Machine Learning with his work in categorical image classification using neural networks. He and Jason have collaborated on several software engineering projects, and has several years of experience in Javascript/Typescript, C-Sharp, Python, Java, and C++.
 
-		Jacob's contributions to Based Capital include talent acquisition; hardware installation, management, acquisition, and maintenance; operational planning; and public relations and advertising.`
+		Jacob's contributions to Based Capital include talent acquisition; hardware installation, management, acquisition, and maintenance; operational planning; and public relations and advertising.`,
+		linkedIn: 'https://www.linkedin.com/in/jacob-stolker-07852a228/'
 	},
 	{
 		name: 'Jason Xu',

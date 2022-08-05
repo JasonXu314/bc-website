@@ -28,6 +28,15 @@ const Statements: NextPage = () => {
 					</div>
 					<div className={styles.signature}>- The Based Capital Team</div>
 				</div>
+				<div className={styles.statement}>
+					<h4 className={styles.date}>08/04/2022</h4>
+					<div className={styles.part}>
+						We are pleased to announce that as part of our expansion plan, our cryptocurrency operations have been moved to a subsidiary named
+						Based DeFi, short for &ldquo;Decentralized Finance&rdquo;. Our parent company will retain the name of Based Capital, and will soon be
+						involved in several exciting new ventures!
+					</div>
+					<div className={styles.signature}>- The Based DeFi Team</div>
+				</div>
 			</div>
 		</div>
 	);
