@@ -1,3 +1,4 @@
+import { Stack } from '@mantine/core';
 import Link from 'next/link';
 import Router from 'next/router';
 import { useEffect, useState } from 'react';
@@ -38,7 +39,12 @@ const Navbar: React.FC = () => {
 			<ul className={styles.list + (closed ? ' ' + styles.closed : '')}>
 				{smol && (
 					<li className={styles['chevron-buffer']}>
-						<img className={styles.chevron} src={closed ? 'chevron-down.svg' : 'chevron-up.svg'} onClick={() => setClosed(!closed)} alt="chevron" />
+						<img
+							className={styles.chevron}
+							src={closed ? 'chevron-down.svg' : 'chevron-up.svg'}
+							onClick={() => setClosed(!closed)}
+							alt="chevron"
+						/>
 					</li>
 				)}
 				<li className={styles.link}>
@@ -46,6 +52,28 @@ const Navbar: React.FC = () => {
 						<a className={styles['link-text']}>About Us</a>
 					</Link>
 				</li>
+				{smol ? (
+					<li className={styles.link}>
+						<Link href="/defi">
+							<a className={styles['link-text']}>Based DeFi</a>
+						</Link>
+						<Link href="/enterprise">
+							<a className={styles['link-text']}>Based Enterprise</a>
+						</Link>
+					</li>
+				) : (
+					<li className={`${styles.link} ${styles.dropdown}`}>
+						<Stack spacing={0}>
+							<span className={styles['link-text']}>Our Subsidiaries</span>
+							<Link href="/defi">
+								<a className={`${styles['link-text']} ${styles.link}`}>Based DeFi</a>
+							</Link>
+							<Link href="/enterprise">
+								<a className={`${styles['link-text']} ${styles.link}`}>Based Enterprise</a>
+							</Link>
+						</Stack>
+					</li>
+				)}
 				<li className={styles.link}>
 					<Link href="/leadership">
 						<a className={styles['link-text']}>Leadership</a>
@@ -54,11 +82,6 @@ const Navbar: React.FC = () => {
 				<li className={styles.link}>
 					<Link href="/contact">
 						<a className={styles['link-text']}>Contact Us</a>
-					</Link>
-				</li>
-				<li className={styles.link}>
-					<Link href="/trade">
-						<a className={styles['link-text']}>Trade</a>
 					</Link>
 				</li>
 				<li className={styles.link}>

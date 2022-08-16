@@ -13,7 +13,7 @@ const Carousel: React.FC = () => {
 	const [imgIdx, setImgIdx] = useState<number>(0);
 
 	useEffect(() => {
-		const newIdx = (imgIdx + 1) % (images.length + 1);
+		const newIdx = (imgIdx + 1) % images.length;
 
 		const interval = setTimeout(() => {
 			setImgIdx(newIdx);
@@ -29,9 +29,9 @@ const Carousel: React.FC = () => {
 			{images.map((image, i) => (
 				<img
 					key={i}
-					className={styles.carousel + (i + 1 === imgIdx ? ' ' + styles.active : '')}
+					className={styles.carousel + (i === imgIdx ? ' ' + styles.active : '')}
 					src={image.src}
-					title={i + 1 === imgIdx ? image.title : undefined}
+					title={i === imgIdx ? image.title : undefined}
 					alt={image.title}
 				/>
 			))}
@@ -42,9 +42,8 @@ const Carousel: React.FC = () => {
 				<img src="chevron-left.svg" alt="backwards" />
 			</button>
 			<div className={styles['dot-row']}>
-				<button className={styles.dot + (imgIdx === 0 ? ' ' + styles.active : '')} onClick={() => setImgIdx(0)} />
 				{images.map((_, i) => (
-					<button key={i} className={styles.dot + (i + 1 === imgIdx ? ' ' + styles.active : '')} onClick={() => setImgIdx(i + 1)} />
+					<button key={i} className={styles.dot + (i === imgIdx ? ' ' + styles.active : '')} onClick={() => setImgIdx(i)} />
 				))}
 			</div>
 		</div>
