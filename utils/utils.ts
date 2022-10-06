@@ -40,11 +40,3 @@ export function getRate(month: number): number {
 export function validateEmail(email: string): boolean {
 	return EMAIL_REGEX.test(email);
 }
-
-export function roundUp(n: number): number {
-	return n % 1 >= 0.9 ? Math.ceil(n) + 1 : Math.ceil(n);
-}
-
-export function roundDown(n: number): number {
-	return n % 1 <= 0.1 ? Math.floor(n) - 1 : Math.floor(n);
-}

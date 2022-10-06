@@ -1,0 +1,66 @@
+@use './vars';
+
+.main {
+	height: 100vh;
+	width: 100vw;
+	background: vars.$dull;
+	display: flex;
+	flex-direction: column;
+
+	.description {
+		display: grid;
+		padding: 3em 8em;
+		grid-template-columns: 1fr 3fr;
+		column-gap: 8em;
+
+		.title {
+			color: white;
+			font-size: 4em;
+			margin: 0;
+			font-family: vars.$main-font;
+
+			@media screen and (max-width: 450px) {
+				font-size: 2em;
+			}
+		}
+
+		.text {
+			background: white;
+			color: vars.$cont;
+			font-size: 1.5em;
+			text-align: center;
+			border-radius: 1em;
+			padding: 2em;
+
+			@media screen and (max-width: 450px) {
+				font-size: 0.75em;
+				padding: 0.5em;
+			}
+		}
+
+		@media screen and (max-width: 1000px) and (min-width: 450px) {
+			grid-template-columns: unset;
+			grid-template-rows: 1fr 1fr;
+			column-gap: unset;
+
+			.title {
+				text-align: center;
+			}
+
+			.mission-text {
+				margin-top: -0.5em;
+			}
+		}
+
+		@media screen and (max-width: 450px) {
+			grid-template-columns: unset;
+			grid-template-rows: 1fr 1fr;
+			column-gap: unset;
+			padding: 1em 2em;
+
+			.title {
+				text-align: center;
+			}
+		}
+	}
+}
