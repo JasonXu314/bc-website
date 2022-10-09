@@ -9,6 +9,8 @@ interface Props {
 }
 
 const Member: NextPage<Props> = ({ member }) => {
+	// TODO: fix responsive layout
+
 	return (
 		<div className={styles.main}>
 			<Head>

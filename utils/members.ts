@@ -33,8 +33,7 @@ export default [
 		shortName: 'matthew',
 		position: 'Chairman of the Board, CFO, International Business Relations Coordinator for the Middle East and Europe',
 		shortDescription: 'Dedicated to Torah Judaism and religious causes and student of history and philosophy, proud to serve in the IDF.',
-		description: `Matthew is an appreciator of history and a student of Archaeology and Economics at the University of Toronto. He is especially knowledgeable about Jewish History and ancient synodal development of modern day Jewish tradition and beliefs. He is also interested in modern eastern politics and Slavic history.
-		Among his roles at Based Capital, LLC are his assigned positions of Chairman of the Board of Directors and that of Chief Financial Officer of the company. He is in charge of coordinating legal and accounting necessities of the company, manages the group's finances, and coordinates international business relations in the Middle East and Europe. He is also a Private in the Israeli Defense Forces, where he serves in the Infantry Corps.`,
+		description: `Among his roles at Based Capital, LLC are his assigned positions of Chairman of the Board of Directors and that of Chief Financial Officer of the company. He is in charge of coordinating legal and accounting necessities of the company, manages the group's finances, and coordinates international business relations in the Middle East and Europe. He is also a Private in the Israeli Defense Forces, where he serves in the Infantry Corps.`, // TODO: edit this
 		linkedIn: 'https://www.linkedin.com/in/matthew-l-630925218/'
 	}
 ] as Member[];

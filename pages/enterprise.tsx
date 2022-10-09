@@ -8,6 +8,7 @@ const DeFi: NextPage = () => {
 		<div className={styles.main}>
 			<Head>
 				<title>Based Enterprise</title>
+				<link rel="icon" href="/favicons/be.png" />
 			</Head>
 			<Navbar />
 			<div className={styles['description']}>

@@ -4,6 +4,8 @@ import Head from 'next/head';
 import { NextPage } from 'next/types';
 
 const Contact: NextPage = () => {
+	// TODO: re-implement contact form
+
 	return (
 		<div className={styles.main}>
 			<Head>

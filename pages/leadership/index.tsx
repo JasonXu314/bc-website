@@ -6,6 +6,8 @@ import { GetStaticProps, NextPage } from 'next/types';
 import members from 'utils/members';
 
 const Members: NextPage = () => {
+	// TODO: fix responsive layout
+
 	return (
 		<div className={styles.main}>
 			<Head>

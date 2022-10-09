@@ -53,16 +53,16 @@
 		}
 
 		.mission-statement {
-			transform: translateY(-300%);
-			background: rgba(0, 0, 0, 0.15);
 			padding-left: 0.5em;
 			padding-right: 0.5em;
 			opacity: 0;
-			transition: opacity 1s linear;
+			transform: translate(40%, -220%);
+			transition: opacity 1s linear, transform 1s ease;
 			transition-delay: 1s;
 
 			&.visible {
 				opacity: 1;
+				transform: translate(40%, -320%);
 			}
 		}
 	}

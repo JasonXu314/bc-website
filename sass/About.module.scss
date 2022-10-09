@@ -57,6 +57,10 @@
 
 				.text {
 					color: white;
+
+					&.dark {
+						color: vars.$cont;
+					}
 				}
 
 				.date {
@@ -94,6 +98,15 @@
 		&.section-6 {
 			background-image: url('/rig.jpg');
 			background-position: 0 15%;
+		}
+
+		&.section-7 {
+			background-image: url('/shaking-hands.jpg');
+			background-position: 0 70%;
+		}
+
+		&.section-8 {
+			background-image: url('/based-enterprise-founding.jpg');
 		}
 	}
 }

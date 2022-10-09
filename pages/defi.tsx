@@ -9,6 +9,7 @@ const DeFi: NextPage = () => {
 		<div className={styles.main}>
 			<Head>
 				<title>Based DeFi</title>
+				<link rel="icon" href="/favicons/bd.png" />
 			</Head>
 			<Navbar />
 			<Carousel />

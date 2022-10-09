@@ -5,6 +5,8 @@ import { NextPage } from 'next/types';
 import Navbar from '../components/Navbar/Navbar';
 
 const About: NextPage = () => {
+	// TODO: fix responsive layout
+
 	const { entry: section1, ref: ref1 } = useIntersection({ threshold: 0.4 });
 	const { entry: section2, ref: ref2 } = useIntersection({ threshold: 0.4 });
 	const { entry: section3, ref: ref3 } = useIntersection({ threshold: 0.4 });
@@ -13,6 +15,7 @@ const About: NextPage = () => {
 	const { entry: section6, ref: ref6 } = useIntersection({ threshold: 0.4 });
 	const { entry: section7, ref: ref7 } = useIntersection({ threshold: 0.4 });
 	const { entry: section8, ref: ref8 } = useIntersection({ threshold: 0.4 });
+	const { entry: section9, ref: ref9 } = useIntersection({ threshold: 0.4 });
 
 	return (
 		<div className={styles.main}>
@@ -70,8 +73,24 @@ const About: NextPage = () => {
 			</section>
 			<section ref={ref7} className={styles.section + ' ' + styles['section-7'] + (section7?.isIntersecting ? ' ' + styles.active : '')}>
 				<div className={styles.inner}>
-					<h1 className={styles.heading}>Expansion</h1>
+					<h1 className={styles.heading}>June&nbsp;&apos;22</h1>
 					<div className={styles.text}>Discussion begins on expanding the business beyond cryptocurrency mining.</div>
+				</div>
+			</section>
+			<section ref={ref8} className={styles.section + ' ' + styles['section-8'] + (section8?.isIntersecting ? ' ' + styles.active : '')}>
+				<div className={styles.inner}>
+					<h1 className={styles.heading}>8/4</h1>
+					<div className={styles.text + ' ' + styles.dark}>
+						Based Capital officially becomes a holding company, and Based Enterprise LLC. is born!
+					</div>
+				</div>
+			</section>
+			<section ref={ref9} className={styles.section + ' ' + styles['section-9'] + (section9?.isIntersecting ? ' ' + styles.active : '')}>
+				<div className={styles.inner}>
+					<h1 className={styles.heading}>9/29</h1>
+					<div className={styles.text}>
+						Based LLC finalizes its first business venture, a partnership with Rabbi Zevi Wineberg Shlit&quot;a to fund his new book.
+					</div>
 				</div>
 			</section>
 		</div>

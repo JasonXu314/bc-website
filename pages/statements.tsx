@@ -29,7 +29,7 @@ const Statements: NextPage = () => {
 				<Statement date="09/19/2022" branch="Enterprise">
 					After much hard work, we are excited to announce the beginning of our first joint venture! Representatives of Based Enterprise have
 					negotiated an agreement with Rabbi Zevi Wineberg Shlit&quot;a to fund the printing of his new book, &ldquo;Baal Shem Tov&rdquo;. We wish
-					him success in his work as an author and religious leader, and look forward to working with him in the future!
+					him success in his work as an author and religious leader, and are excited to work with him!
 				</Statement>
 			</div>
 		</div>
