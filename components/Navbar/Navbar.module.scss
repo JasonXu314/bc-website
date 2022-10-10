@@ -4,7 +4,8 @@
 	display: flex;
 	background: vars.$main;
 	flex-direction: row;
-	height: 3.75em;
+	font-size: larger;
+	height: 3.52em;
 	position: relative;
 
 	.logo-link {
@@ -26,11 +27,11 @@
 
 		.chevron-buffer {
 			position: relative;
-			height: 3.75em;
+			height: 3.52em;
 			display: block;
 
 			.chevron {
-				height: 3.75em;
+				height: 3.52em;
 				display: block;
 				margin: auto;
 			}
@@ -43,10 +44,13 @@
 			.link-text {
 				display: block;
 				color: white;
-				font-size: larger;
 				padding: 1em;
 				text-decoration: none;
 				font-family: vars.$main-font;
+			}
+
+			&.dropdown:not(:hover) {
+				overflow: hidden;
 			}
 
 			&:hover {
@@ -54,7 +58,7 @@
 			}
 		}
 
-		@media screen and (max-width: 450px) {
+		@media screen and (max-width: 911px) {
 			display: flex;
 			flex-direction: column;
 			overflow: visible;
@@ -65,7 +69,7 @@
 		}
 	}
 
-	@media screen and (max-width: 450px) {
+	@media screen and (max-width: 911px) {
 		justify-content: space-between;
 	}
 }

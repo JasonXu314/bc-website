@@ -1,0 +1,17 @@
+@use '../../sass/vars';
+
+.main {
+	padding: 1em;
+	margin: 1em 2em;
+	background: white;
+	color: vars.$main;
+
+	.signature {
+		text-align: right;
+		margin-top: 1em;
+	}
+
+	.date {
+		margin: 0.25em 0;
+	}
+}

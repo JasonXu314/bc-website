@@ -49,7 +49,7 @@ export default async (req: NextApiRequest, res: NextApiResponse<ContactResponse>
 			return;
 		}
 
-		const client = mailjet.connect('adad4a81b735f9481b922d41d3308f9f', process.env.MAILJET_SECRET!);
+		const client = mailjet.apiConnect('adad4a81b735f9481b922d41d3308f9f', process.env.MAILJET_SECRET!);
 
 		await client
 			.post('send', { version: 'v3.1' })

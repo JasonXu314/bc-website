@@ -2,6 +2,7 @@ import styles from '$/members/Member.module.scss';
 import Navbar from '@/Navbar/Navbar';
 import Head from 'next/head';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next/types';
+import { useEffect, useState } from 'react';
 import members from 'utils/members';
 
 interface Props {
@@ -9,10 +10,27 @@ interface Props {
 }
 
 const Member: NextPage<Props> = ({ member }) => {
+	// TODO: fix responsive layout
+	const [smol, setSmol] = useState<boolean>(true);
+
+	useEffect(() => {
+		setSmol(window.innerWidth <= 588);
+
+		const resizeListener = () => {
+			setSmol(window.innerWidth <= 588);
+		};
+
+		window.addEventListener('resize', resizeListener);
+
+		return () => {
+			window.removeEventListener('resize', resizeListener);
+		};
+	}, []);
+
 	return (
 		<div className={styles.main}>
 			<Head>
-				<title>Based Capital | {member.name}</title>
+				<title>{`Based Capital | ${member.name}`}</title>
 			</Head>
 			<Navbar />
 			<div className={styles.card}>
