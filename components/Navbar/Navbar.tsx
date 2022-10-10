@@ -17,10 +17,10 @@ const Navbar: React.FC = () => {
 	}, []);
 
 	useEffect(() => {
-		setSmol(window.innerWidth <= 450);
+		setSmol(window.innerWidth <= 911);
 
 		const resizeListener = () => {
-			setSmol(window.innerWidth <= 450);
+			setSmol(window.innerWidth <= 911);
 		};
 
 		window.addEventListener('resize', resizeListener);
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
 					<li className={styles['chevron-buffer']}>
 						<img
 							className={styles.chevron}
-							src={closed ? 'chevron-down.svg' : 'chevron-up.svg'}
+							src={closed ? '/chevron-down.svg' : '/chevron-up.svg'}
 							onClick={() => setClosed(!closed)}
 							alt="chevron"
 						/>
@@ -60,14 +60,18 @@ const Navbar: React.FC = () => {
 					</Link>
 				</li>
 				{smol ? (
-					<li className={styles.link}>
-						<Link href="/defi">
-							<a className={styles['link-text']}>Based DeFi</a>
-						</Link>
-						<Link href="/enterprise">
-							<a className={styles['link-text']}>Based Enterprise</a>
-						</Link>
-					</li>
+					<>
+						<li className={styles.link}>
+							<Link href="/defi">
+								<a className={styles['link-text']}>Based DeFi</a>
+							</Link>
+						</li>
+						<li className={styles.link}>
+							<Link href="/enterprise">
+								<a className={styles['link-text']}>Based Enterprise</a>
+							</Link>
+						</li>
+					</>
 				) : (
 					<li className={`${styles.link} ${styles.dropdown}`}>
 						<Stack spacing={0}>

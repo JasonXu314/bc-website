@@ -20,8 +20,8 @@
 		.picture-wrapper {
 			display: block;
 			position: relative;
-			height: 16em;
-			width: 16em;
+			min-height: 20vw;
+			min-width: 20vw;
 			overflow: hidden;
 
 			.picture {
@@ -29,36 +29,63 @@
 				position: absolute;
 				width: 100%;
 			}
+
+			
 		}
 
 		.text {
 			padding: 1em;
+		}
+		
+		.name {
+			color: white;
+			font-size: 3em;
+			margin: 0;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.position {
+			margin: 0;
+			color: white;
+
+			.linkedin {
+				margin-left: 2ch;
+				color: white;
+			}
+		}
+
+		.desc {
+			font-size: 1.25em;
+			color: white;
+			text-indent: 1em;
+		}
+
+		@media screen and (max-width: 588px) {
+			display: grid;
+			grid-template-areas: 'picture name .'
+								 'position position position'
+								 'desc desc desc';
+			row-gap: 0.5em;
+
+			.picture-wrapper {
+				grid-area: picture;
+			}
 
 			.name {
-				color: white;
-				font-size: 3em;
-				margin: 0;
-				text-decoration: none;
-
-				&:hover {
-					text-decoration: underline;
-				}
+				grid-area: name;
 			}
 
 			.position {
-				margin: 0;
-				color: white;
-
-				.linkedin {
-					margin-left: 2ch;
-					color: white;
-				}
+				grid-area: position;
 			}
 
 			.desc {
-				font-size: 1.25em;
-				color: white;
-				text-indent: 1em;
+				grid-area: desc;
+				margin: 0;
 			}
 		}
 	}

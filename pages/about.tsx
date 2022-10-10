@@ -42,7 +42,7 @@ const About: NextPage = () => {
 				<div className={styles.inner}>
 					<h1 className={styles.heading}>Second Campout</h1>
 					<div className={styles.text}>
-						<span className={styles.date}>4/22:</span> Camping out overnight, we acquire our second, third, and fourth RTX 3080s, allowing our rig
+						<span className={styles.date}>6/3:</span> Camping out overnight, we acquire our second, third, and fourth RTX 3080s, allowing our rig
 						to be properly assembled
 					</div>
 				</div>
