@@ -10,14 +10,13 @@ interface Props {
 }
 
 const Member: NextPage<Props> = ({ member }) => {
-	// TODO: fix responsive layout
 	const [smol, setSmol] = useState<boolean>(true);
 
 	useEffect(() => {
-		setSmol(window.innerWidth <= 588);
+		setSmol(window.innerWidth <= 911);
 
 		const resizeListener = () => {
-			setSmol(window.innerWidth <= 588);
+			setSmol(window.innerWidth <= 911);
 		};
 
 		window.addEventListener('resize', resizeListener);
@@ -27,7 +26,39 @@ const Member: NextPage<Props> = ({ member }) => {
 		};
 	}, []);
 
-	return (
+	return smol ? (
+		<div className={styles.main}>
+			<Head>
+				<title>{`Based Capital | ${member.name}`}</title>
+			</Head>
+			<Navbar />
+			<div className={styles.card}>
+				<div className={styles['picture-wrapper']}>
+					<img className={styles.picture} src={`/pictures/${member.shortName}.jpg`} alt="Picture Missing :(" />
+				</div>
+				<div className={styles.header}>
+					<h4 className={styles.name}>{member.name}</h4>
+					<p className={styles.position}>
+						{member.position}
+						{member.linkedIn && (
+							<span>
+								<a className={styles.linkedin} href={member.linkedIn} target="_blank" rel="noreferrer noopener">
+									LinkedIn
+								</a>
+							</span>
+						)}
+					</p>
+				</div>
+				<div className={styles['desc-wrapper']}>
+					{member.description.split('\n').map((desc, i) => (
+						<p key={i} className={styles.desc}>
+							{desc}
+						</p>
+					))}
+				</div>
+			</div>
+		</div>
+	) : (
 		<div className={styles.main}>
 			<Head>
 				<title>{`Based Capital | ${member.name}`}</title>

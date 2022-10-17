@@ -27,28 +27,62 @@
 
 		.text {
 			padding: 1em;
+		}
+		
+		.name {
+			color: white;
+			font-size: 3em;
+			margin: 0;
+			text-decoration: none;
+		}
 
-			.name {
+		.position {
+			margin: 0;
+			color: white;
+
+			.linkedin {
+				margin-left: 2ch;
 				color: white;
-				font-size: 3em;
+			}
+		}
+
+		.desc {
+			font-size: 1.25em;
+			color: white;
+			text-indent: 1em;
+		}
+		
+		@media screen and (max-width: 911px) {
+			display: grid;
+			grid-template-areas: 'picture header '
+								 'desc desc';
+			row-gap: 0.5em;
+
+			.picture-wrapper {
+				grid-area: picture;
+			}
+
+			.header {
+				grid-area: header;
+			}
+
+			.desc-wrapper {
+				grid-area: desc;
 				margin: 0;
-				text-decoration: none;
+			}
+		}
+
+		@media screen and (max-width: 600px) {
+			.name {
+				font-size: 2.5em;
 			}
 
 			.position {
-				margin: 0;
-				color: white;
-
-				.linkedin {
-					margin-left: 2ch;
-					color: white;
-				}
+				font-size: 0.75em;
 			}
 
 			.desc {
-				font-size: 1.25em;
-				color: white;
-				text-indent: 1em;
+				font-size: 1em;
 			}
 		}
 	}
