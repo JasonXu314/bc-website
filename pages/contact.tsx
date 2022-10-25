@@ -61,8 +61,7 @@ const Contact: NextPage = () => {
 			<Navbar />
 			<div className={styles.content}>
 				<div className={styles.heading}>
-					If you are interested in getting into contact, reach out to us <a href="mailto:basedcapitalllc@gmail.com">here</a> or use the form below,
-					and we will get back to you shortly!
+				If you are interested in getting in contact with us, use the form below — we will get back to you shortly!
 				</div>
 				<div className={styles.form}>
 					<Input
