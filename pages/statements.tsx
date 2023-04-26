@@ -31,6 +31,16 @@ const Statements: NextPage = () => {
 					We regret to inform the public that our ex-CFO and ex-CAO has departed from our company within the past month. His role will be taken over
 					by Matthew Levy. We have enjoyed his presence and his valuable contributions to our group and we jointly wish him well in the future.
 				</Statement>
+				<Statement date="04/24/2021" branch="Capital">
+					Yesterday was the 2nd anniversary of the conceptual foundation of our company. The name &ldquo;Based Capital&rdquo; didn&apos;t arise until
+					our establishment had officially unionized. Yet, our team all shared the same aspirations in wanting to seize the opportunities offered by
+					mining cryptocurrencies. Since our initial congregations and investments, Based Capital has become an international investment vehicle.
+					<br />
+					We, Based Capital, would like to direct a great thank you to our founder, <strong>Jacob Stolker</strong>, and all those who have been
+					involved with our institution. Our entire group&apos;s teamwork and collaboration have allowed our organization to achieve many business
+					accolades over these past two years. Subsequently, our mindset pushes us forward as we recognize that Based Capital&apos;s journey has just
+					begun. Here is to another year of success -- may this year be the most triumphant of them all!
+				</Statement>
 			</div>
 		</div>
 	);
