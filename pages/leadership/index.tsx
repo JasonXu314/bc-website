@@ -1,4 +1,4 @@
-import styles from '$/members/Index.module.scss';
+import styles from '$/leadership/Index.module.scss';
 import Navbar from '@/Navbar/Navbar';
 import Head from 'next/head';
 import Link from 'next/link';

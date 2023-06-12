@@ -1,4 +1,4 @@
-import styles from '$/members/Member.module.scss';
+import styles from '$/leadership/Member.module.scss';
 import Navbar from '@/Navbar/Navbar';
 import Head from 'next/head';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next/types';
