@@ -1,8 +1,8 @@
-import styles from '$/Defi.module.scss';
 import Carousel from '@/Carousel/Carousel';
 import Navbar from '@/Navbar/Navbar';
 import Head from 'next/head';
 import { NextPage } from 'next/types';
+import styles from './Defi.module.scss';
 
 const DeFi: NextPage = () => {
 	return (
