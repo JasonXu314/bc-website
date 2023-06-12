@@ -28,7 +28,7 @@
 		.text {
 			padding: 1em;
 		}
-		
+
 		.name {
 			color: white;
 			font-size: 3em;
@@ -51,12 +51,15 @@
 			color: white;
 			text-indent: 1em;
 		}
-		
+
 		@media screen and (max-width: 911px) {
 			display: grid;
-			grid-template-areas: 'picture header '
-								 'desc desc';
+			grid-template-areas:
+				'picture header '
+				'desc desc';
+			grid-template-columns: unset;
 			row-gap: 0.5em;
+			padding: 2em;
 
 			.picture-wrapper {
 				grid-area: picture;
@@ -77,12 +80,31 @@
 				font-size: 2.5em;
 			}
 
+			.picture-wrapper {
+				width: 40vw;
+				height: 40vw;
+			}
+
 			.position {
 				font-size: 0.75em;
 			}
 
 			.desc {
 				font-size: 1em;
+			}
+		}
+
+		@media screen and (max-width: 400px) {
+			.name {
+				font-size: 1.25em;
+			}
+
+			.position {
+				font-size: 0.5em;
+			}
+
+			.desc {
+				font-size: 0.75em;
 			}
 		}
 	}
