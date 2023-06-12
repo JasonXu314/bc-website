@@ -18,25 +18,27 @@
 		gap: 2em;
 
 		.picture-wrapper {
-			display: block;
+			box-sizing: border-box;
 			position: relative;
-			min-height: 20vw;
-			min-width: 20vw;
+			height: 20vw;
+			width: 20vw;
 			overflow: hidden;
+			flex-basis: 20vw;
 
 			.picture {
 				display: block;
-				position: absolute;
-				width: 100%;
+				height: 100%;
+				margin: 0 auto;
 			}
-
-			
 		}
 
 		.text {
+			width: fit-content;
 			padding: 1em;
+			flex-basis: 0;
+			flex-grow: 1;
 		}
-		
+
 		.name {
 			color: white;
 			font-size: 3em;
@@ -66,10 +68,12 @@
 
 		@media screen and (max-width: 588px) {
 			display: grid;
-			grid-template-areas: 'picture name .'
-								 'position position position'
-								 'desc desc desc';
+			grid-template-areas:
+				'picture name .'
+				'position position position'
+				'desc desc desc';
 			row-gap: 0.5em;
+			font-size: small;
 
 			.picture-wrapper {
 				grid-area: picture;
@@ -77,6 +81,7 @@
 
 			.name {
 				grid-area: name;
+				font-size: 2em;
 			}
 
 			.position {
@@ -86,6 +91,18 @@
 			.desc {
 				grid-area: desc;
 				margin: 0;
+			}
+		}
+
+		@media screen and (max-width: 512px) {
+			font-size: xx-small;
+
+			.name {
+				font-size: 1.5em;
+			}
+
+			.desc {
+				font-size: 1em;
 			}
 		}
 	}
