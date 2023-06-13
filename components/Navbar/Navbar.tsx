@@ -62,11 +62,6 @@ const Navbar: React.FC = () => {
 				{smol ? (
 					<>
 						<li className={styles.link}>
-							<Link href="/defi">
-								<a className={styles['link-text']}>Based DeFi</a>
-							</Link>
-						</li>
-						<li className={styles.link}>
 							<Link href="/enterprise">
 								<a className={styles['link-text']}>Based Enterprise</a>
 							</Link>
@@ -76,9 +71,6 @@ const Navbar: React.FC = () => {
 					<li className={`${styles.link} ${styles.dropdown}`}>
 						<Stack spacing={0}>
 							<span className={styles['link-text']}>Our Subsidiaries</span>
-							<Link href="/defi">
-								<a className={`${styles['link-text']} ${styles.link}`}>Based DeFi</a>
-							</Link>
 							<Link href="/enterprise">
 								<a className={`${styles['link-text']} ${styles.link}`}>Based Enterprise</a>
 							</Link>
