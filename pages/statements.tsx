@@ -13,6 +13,9 @@ const Statements: NextPage = () => {
 			<Navbar />
 			<div className={styles.content}>
 				<h1 className={styles.title}>Company Statements</h1>
+				<Statement date="06/18/2023" branch="Capital" first>
+					Placeholder for galilean estates announcement.
+				</Statement>
 				<Statement date="04/24/2023" branch="Capital">
 					Yesterday was the 2nd anniversary of the conceptual foundation of our company. The name &ldquo;Based Capital&rdquo; didn&apos;t arise until
 					our establishment had officially unionized. Yet, our team all shared the same aspirations in wanting to seize the opportunities offered by
