@@ -24,7 +24,7 @@ export default [
 		position: 'COO',
 		shortDescription:
 			'Chief Operating Officer of Based Capital. His contributions include graphics card acquisition, logistics organization, and business consultation.',
-		description: `Louis Li is the Chief Operating Officer of Based Capital. His interests include quiz bowl, history, working out, and politics. He is currently studying applied math and computer science at Brown University.
+		description: `Louis Li is the Chief Operating Officer of Based Capital. His interests include quiz bowl, history, working out, and politics. He is currently studying applied math and computer science at Brown University, and a Software Engineering intern at Reinsurance Group of America.
 			His contributions include graphics card acquisition, logistics organization, and business consultation.`,
 		linkedIn: 'https://www.linkedin.com/in/louis-l-14261b21a/'
 	},
