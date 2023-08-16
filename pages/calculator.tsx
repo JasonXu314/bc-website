@@ -7,7 +7,7 @@ import Dropdown from '../components/Dropdown/Dropdown';
 import Input from '../components/Input/Input';
 import Navbar from '../components/Navbar/Navbar';
 import styles from '../sass/Calculator.module.scss';
-import { daysInMonth, getRate, SHAREHOLDERS } from '../utils/utils';
+import { SHAREHOLDERS, daysInMonth, getRate } from '../utils/utils';
 
 const monthOptions = [
 	{ name: 'January', value: 0 },
@@ -25,6 +25,9 @@ const monthOptions = [
 ];
 
 const Calculator: NextPage = () => {
+	const [authd, setAuthd] = useState<boolean>(false);
+	const [attempted, setAttempted] = useState<boolean>(false);
+	const [attemptSecret, setAttemptSecret] = useState<string>('');
 	const [wattage, setWattage] = useState<number>(0);
 	const [eagerWattage, setEagerWattage] = useState<string | null>(null);
 	const [revenue, setRevenue] = useState<number>(0);
@@ -60,6 +63,38 @@ const Calculator: NextPage = () => {
 				setEthPrice(Number(res.data.result.ethusd));
 			});
 	}, []);
+
+	if (!authd) {
+		return (
+			<div className={styles.main}>
+				<Head>
+					<title>Super Secret</title>
+				</Head>
+				<Navbar />
+				<div className={styles.content}>
+					<Input
+						label="Secret"
+						value={attemptSecret}
+						onChange={(evt) => {
+							setAttemptSecret(evt.target.value);
+						}}
+					/>
+					<Button
+						onClick={() => {
+							axios
+								.post('/api/access-calculator', { secret: attemptSecret })
+								.then(() => setAuthd(true))
+								.catch(() => setAuthd(false))
+								.finally(() => setAttempted(true));
+							setAttemptSecret('');
+						}}>
+						Check Secret
+					</Button>
+					{attempted && <div className={styles.error}>Incorrect Secret</div>}
+				</div>
+			</div>
+		);
+	}
 
 	return (
 		<div className={styles.main}>
@@ -188,3 +223,4 @@ const Calculator: NextPage = () => {
 };
 
 export default Calculator;
+
