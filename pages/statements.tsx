@@ -33,7 +33,7 @@ const Statements: NextPage = () => {
 				</Statement>
 				<Statement date="08/04/2022" branch={'████' as any}>
 					We are pleased to announce that as part of our expansion plan, our ██████████████ operations have been moved to a subsidiary named Based
-					████, short for &ldquo;Decentralized Finance&rdquo;. Our parent company will retain the name of Based Capital, and will soon be involved in
+					████, short for &ldquo;█████████████ ███████&rdquo;. Our parent company will retain the name of Based Capital, and will soon be involved in
 					several exciting new ventures!
 				</Statement>
 				<Statement date="07/20/2022" branch="Capital">
