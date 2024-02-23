@@ -1,10 +1,17 @@
 import styles from '$/About.module.scss';
+import Button from '@/Button/Button';
+import Input from '@/Input/Input';
 import { useIntersection } from '@mantine/hooks';
+import axios from 'axios';
 import Head from 'next/head';
 import { NextPage } from 'next/types';
-import Navbar from '../components/Navbar/Navbar';
+import { useState } from 'react';
+import Navbar from '../../components/Navbar/Navbar';
 
 const About: NextPage = () => {
+	const [authd, setAuthd] = useState<boolean>(false);
+	const [attempted, setAttempted] = useState<boolean>(false);
+	const [attemptSecret, setAttemptSecret] = useState<string>('');
 	// TODO: fix responsive layout
 
 	const { entry: section1, ref: ref1 } = useIntersection({ threshold: 0.4 });
@@ -16,6 +23,38 @@ const About: NextPage = () => {
 	const { entry: section7, ref: ref7 } = useIntersection({ threshold: 0.4 });
 	const { entry: section8, ref: ref8 } = useIntersection({ threshold: 0.4 });
 	const { entry: section9, ref: ref9 } = useIntersection({ threshold: 0.4 });
+
+	if (!authd) {
+		return (
+			<div className={styles.main}>
+				<Head>
+					<title>Super Secret</title>
+				</Head>
+				<Navbar />
+				<div className={styles.content}>
+					<Input
+						label="Secret"
+						value={attemptSecret}
+						onChange={(evt) => {
+							setAttemptSecret(evt.target.value);
+						}}
+					/>
+					<Button
+						onClick={() => {
+							axios
+								.post('/api/access-archive', { secret: attemptSecret })
+								.then(() => setAuthd(true))
+								.catch(() => setAuthd(false))
+								.finally(() => setAttempted(true));
+							setAttemptSecret('');
+						}}>
+						Check Secret
+					</Button>
+					{attempted && <div className={styles.error}>Incorrect Secret</div>}
+				</div>
+			</div>
+		);
+	}
 
 	return (
 		<div className={styles.main}>
@@ -98,3 +137,4 @@ const About: NextPage = () => {
 };
 
 export default About;
+

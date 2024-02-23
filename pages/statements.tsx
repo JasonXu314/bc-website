@@ -19,7 +19,7 @@ const Statements: NextPage = () => {
 				<Statement date="04/24/2023" branch="Capital">
 					Yesterday was the 2nd anniversary of the conceptual foundation of our company. The name &ldquo;Based Capital&rdquo; didn&apos;t arise until
 					our establishment had officially unionized. Yet, our team all shared the same aspirations in wanting to seize the opportunities offered by
-					mining cryptocurrencies. Since our initial congregations and investments, Based Capital has become an international investment vehicle.
+					mining ████████████████. Since our initial congregations and investments, Based Capital has become an international investment vehicle.
 					<br />
 					We, Based Capital, would like to direct a great thank you to our founder, <strong>Jacob Stolker</strong>, and all those who have been
 					involved with our institution. Our entire group&apos;s teamwork and collaboration have allowed our organization to achieve many business
@@ -31,9 +31,9 @@ const Statements: NextPage = () => {
 					negotiated an agreement with Rabbi Zevi Wineberg Shlit&quot;a to fund the printing of his new book, &ldquo;Baal Shem Tov&rdquo;. We wish
 					him success in his work as an author and religious leader, and are excited to work with him!
 				</Statement>
-				<Statement date="08/04/2022" branch="DeFi">
-					We are pleased to announce that as part of our expansion plan, our cryptocurrency operations have been moved to a subsidiary named Based
-					DeFi, short for &ldquo;Decentralized Finance&rdquo;. Our parent company will retain the name of Based Capital, and will soon be involved in
+				<Statement date="08/04/2022" branch={'████' as any}>
+					We are pleased to announce that as part of our expansion plan, our ██████████████ operations have been moved to a subsidiary named Based
+					████, short for &ldquo;Decentralized Finance&rdquo;. Our parent company will retain the name of Based Capital, and will soon be involved in
 					several exciting new ventures!
 				</Statement>
 				<Statement date="07/20/2022" branch="Capital">
@@ -50,3 +50,4 @@ const Statements: NextPage = () => {
 };
 
 export default Statements;
+

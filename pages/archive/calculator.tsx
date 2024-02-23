@@ -2,12 +2,12 @@ import axios from 'axios';
 import Head from 'next/head';
 import { NextPage } from 'next/types';
 import { useEffect, useMemo, useState } from 'react';
-import Button from '../components/Button/Button';
-import Dropdown from '../components/Dropdown/Dropdown';
-import Input from '../components/Input/Input';
-import Navbar from '../components/Navbar/Navbar';
-import styles from '../sass/Calculator.module.scss';
-import { SHAREHOLDERS, daysInMonth, getRate } from '../utils/utils';
+import Button from '../../components/Button/Button';
+import Dropdown from '../../components/Dropdown/Dropdown';
+import Input from '../../components/Input/Input';
+import Navbar from '../../components/Navbar/Navbar';
+import styles from '../../sass/Calculator.module.scss';
+import { SHAREHOLDERS, daysInMonth, getRate } from '../../utils/utils';
 
 const monthOptions = [
 	{ name: 'January', value: 0 },
@@ -82,7 +82,7 @@ const Calculator: NextPage = () => {
 					<Button
 						onClick={() => {
 							axios
-								.post('/api/access-calculator', { secret: attemptSecret })
+								.post('/api/access-archive', { secret: attemptSecret })
 								.then(() => setAuthd(true))
 								.catch(() => setAuthd(false))
 								.finally(() => setAttempted(true));

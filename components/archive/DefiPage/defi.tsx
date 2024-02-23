@@ -17,7 +17,7 @@ const DeFi: NextPage = () => {
 				<h4 className={styles.title}>Mission Statement</h4>
 				<i className={styles['mission-text']}>
 					We at Based DeFi eagerly endeavor to contribute to the rising and critically important future of the decentralized finance networks of
-					cryptocurrencies.
+					████████████████.
 				</i>
 			</div>
 		</div>
@@ -25,3 +25,4 @@ const DeFi: NextPage = () => {
 };
 
 export default DeFi;
+

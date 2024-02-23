@@ -54,11 +54,11 @@ const Navbar: React.FC = () => {
 						/>
 					</li>
 				)}
-				<li className={styles.link}>
+				{/* <li className={styles.link}>
 					<Link href="/about">
 						<a className={styles['link-text']}>About Us</a>
 					</Link>
-				</li>
+				</li> */}
 				{smol ? (
 					<>
 						<li className={styles.link}>
@@ -103,3 +103,4 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+
