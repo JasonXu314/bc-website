@@ -1,16 +1,16 @@
-import styles from '$/Enterprise.module.scss';
+import styles from '$/enterprise/Index.module.scss';
 import Navbar from '@/Navbar/Navbar';
 import Head from 'next/head';
 import { NextPage } from 'next/types';
 
-const DeFi: NextPage = () => {
+const Index: NextPage = () => {
 	return (
 		<div className={styles.main}>
 			<Head>
 				<title>Based Enterprise</title>
-				<link rel="icon" href="/favicons/be.png" />
+				<link rel="icon" href="/favicons/blce.ico" />
 			</Head>
-			<Navbar />
+			<Navbar logo="/logos/blce.svg" />
 			<div className={styles['description']}>
 				<h4 className={styles.title}>Based Enterprise</h4>
 				<i className={styles['text']}>
@@ -21,4 +21,5 @@ const DeFi: NextPage = () => {
 	);
 };
 
-export default DeFi;
+export default Index;
+

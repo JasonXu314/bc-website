@@ -1,13 +1,16 @@
 import { Stack } from '@mantine/core';
 import Link from 'next/link';
-import Router, { useRouter } from 'next/router';
+import Router from 'next/router';
 import { useEffect, useState } from 'react';
 import styles from './Navbar.module.scss';
 
-const Navbar: React.FC = () => {
+interface Props {
+	logo?: string;
+}
+
+const Navbar: React.FC<Props> = ({ logo = '/logos/blc.svg' }) => {
 	const [smol, setSmol] = useState<boolean>(true);
 	const [closed, setClosed] = useState<boolean>(true);
-	const router = useRouter();
 
 	useEffect(() => {
 		Router.beforePopState(() => {
@@ -34,13 +37,7 @@ const Navbar: React.FC = () => {
 		<nav className={styles.main}>
 			<Link href="/">
 				<a className={styles['logo-link']}>
-					{router.pathname === '/defi' ? (
-						<img src="/logos/bd.svg" className={styles.logo} alt="logo" />
-					) : router.pathname === '/enterprise' ? (
-						<img src="/logos/be.svg" className={styles.logo} alt="logo" />
-					) : (
-						<img src="/logos/bc.svg" className={styles.logo} alt="logo" />
-					)}
+					<img src={logo} className={styles.logo} alt="logo" />
 				</a>
 			</Link>
 			<ul className={styles.list + (closed ? ' ' + styles.closed : '')}>
@@ -60,20 +57,27 @@ const Navbar: React.FC = () => {
 					</Link>
 				</li> */}
 				{smol ? (
-					<>
-						<li className={styles.link}>
-							<Link href="/enterprise">
-								<a className={styles['link-text']}>Based Enterprise</a>
-							</Link>
-						</li>
-					</>
+					<li className={styles.link}>
+						<Link href="/enterprise">
+							<a className={styles['link-text']}>Based Enterprise</a>
+						</Link>
+					</li>
 				) : (
 					<li className={`${styles.link} ${styles.dropdown}`}>
 						<Stack spacing={0}>
-							<span className={styles['link-text']}>Our Subsidiaries</span>
-							<Link href="/enterprise">
-								<a className={`${styles['link-text']} ${styles.link}`}>Based Enterprise</a>
-							</Link>
+							<span className={styles['link-text']} style={{ marginBottom: '1px' }}>
+								Our Subsidiaries
+							</span>
+							<div className={styles['link-row']}>
+								<Link href="/enterprise">
+									<a className={`${styles['link-text']} ${styles.link}`}>Based Enterprise</a>
+								</Link>
+								<Stack spacing={0} className={styles.submenu}>
+									<Link href="/enterprise/leadership">
+										<a className={`${styles['link-text']} ${styles.link}`}>Members</a>
+									</Link>
+								</Stack>
+							</div>
 						</Stack>
 					</li>
 				)}

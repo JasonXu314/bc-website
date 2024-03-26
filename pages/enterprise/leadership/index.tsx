@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticProps, NextPage } from 'next/types';
 import { useEffect, useState } from 'react';
-import members from 'utils/data/members';
+import members from 'utils/data/enterprise/members';
 
 const Members: NextPage = () => {
 	const [smol, setSmol] = useState<boolean>(true);
@@ -26,15 +26,16 @@ const Members: NextPage = () => {
 	return smol ? (
 		<div className={styles.main}>
 			<Head>
-				<title>Based Capital | Leadership</title>
+				<title>Based Enterprise | Leadership</title>
+				<link rel="icon" href="/favicons/blce.ico" />
 			</Head>
-			<Navbar />
+			<Navbar logo="/logos/blce.svg" />
 			{members.map((member) => (
 				<div key={member.name} className={styles['member-card']}>
 					<div className={styles['picture-wrapper']}>
-						<img className={styles.picture} src={`pictures/${member.shortName}.jpg`} alt="Picture Missing :(" />
+						<img className={styles.picture} src={`/pictures/${member.shortName}.jpg`} alt="Picture Missing :(" />
 					</div>
-					<Link href="/leadership/[member]" as={`/leadership/${member.shortName}`}>
+					<Link href="/enterprise/leadership/[member]" as={`/enterprise/leadership/${member.shortName}`}>
 						<a className={styles.name}>{member.name}</a>
 					</Link>
 					<p className={styles.position}>
@@ -54,16 +55,17 @@ const Members: NextPage = () => {
 	) : (
 		<div className={styles.main}>
 			<Head>
-				<title>Based Capital | Leadership</title>
+				<title>Based Enterprise | Leadership</title>
+				<link rel="icon" href="/favicons/blce.ico" />
 			</Head>
-			<Navbar />
+			<Navbar logo="/logos/blce.svg" />
 			{members.map((member) => (
 				<div key={member.name} className={styles['member-card']}>
 					<div className={styles['picture-wrapper']}>
-						<img className={styles.picture} src={`pictures/${member.shortName}.jpg`} alt="Picture Missing :(" />
+						<img className={styles.picture} src={`/pictures/${member.shortName}.jpg`} alt="Picture Missing :(" />
 					</div>
 					<div className={styles.text}>
-						<Link href="/leadership/[member]" as={`/leadership/${member.shortName}`}>
+						<Link href="/enterprise/leadership/[member]" as={`/enterprise/leadership/${member.shortName}`}>
 							<a className={styles.name}>{member.name}</a>
 						</Link>
 						<p className={styles.position}>

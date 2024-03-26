@@ -1,5 +1,6 @@
-$main: #076e9f;
-$sec: #0ea3c8;
-$dull: #256492;
-$cont: #3d5f86;
+$main: #941f1f;
+$sec: #d12f2f;
+$dull: darken($main, 10%);
+$cont: lighten($main, 5%);
 $main-font: 'Cormorant Garamond', serif;
+

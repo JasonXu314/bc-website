@@ -3,7 +3,7 @@ import Navbar from '@/Navbar/Navbar';
 import Head from 'next/head';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next/types';
 import { useEffect, useState } from 'react';
-import members from 'utils/data/members';
+import members from 'utils/data/enterprise/members';
 
 interface Props {
 	member: Member;
@@ -29,9 +29,10 @@ const Member: NextPage<Props> = ({ member }) => {
 	return smol ? (
 		<div className={styles.main}>
 			<Head>
-				<title>{`Based Capital | ${member.name}`}</title>
+				<title>{`Based Enterprise | ${member.name}`}</title>
+				<link rel="icon" href="/favicons/blce.ico" />
 			</Head>
-			<Navbar />
+			<Navbar logo="/logos/blce.svg" />
 			<div className={styles.card}>
 				<div className={styles['picture-wrapper']}>
 					<img className={styles.picture} src={`/pictures/${member.shortName}.jpg`} alt="Picture Missing :(" />
@@ -61,9 +62,10 @@ const Member: NextPage<Props> = ({ member }) => {
 	) : (
 		<div className={styles.main}>
 			<Head>
-				<title>{`Based Capital | ${member.name}`}</title>
+				<title>{`Based Enterprise | ${member.name}`}</title>
+				<link rel="icon" href="/favicons/blce.ico" />
 			</Head>
-			<Navbar />
+			<Navbar logo="/logos/blce.svg" />
 			<div className={styles.card}>
 				<div className={styles['picture-wrapper']}>
 					<img className={styles.picture} src={`/pictures/${member.shortName}.jpg`} alt="Picture Missing :(" />

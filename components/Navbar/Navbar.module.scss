@@ -42,6 +42,7 @@
 			background: vars.$main;
 			margin-top: -1px;
 			cursor: pointer;
+			transition: background 150ms ease-in-out;
 
 			.link-text {
 				display: block;
@@ -51,12 +52,28 @@
 				font-family: vars.$main-font;
 			}
 
-			&.dropdown:not(:hover) {
-				overflow: hidden;
+			&.dropdown {
+				.link-row {
+					width: 100%;
+					overflow: hidden;
+
+					&:has(.link-text:hover) {
+						overflow: visible;
+					}
+
+					.submenu {
+						transform: translate(100%, -100%);
+					}
+				}
+
+				&:not(:hover) {
+					overflow: hidden;
+				}
 			}
 
 			&:hover {
 				background: vars.$cont;
+				transition: background 150ms ease-in-out;
 			}
 		}
 
@@ -75,3 +92,4 @@
 		justify-content: space-between;
 	}
 }
+
