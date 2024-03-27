@@ -35,7 +35,7 @@ const Member: NextPage<Props> = ({ member }) => {
 			<Navbar logo="/logos/blce.svg" />
 			<div className={styles.card}>
 				<div className={styles['picture-wrapper']}>
-					<img className={styles.picture} src={`/pictures/${member.shortName}.jpg`} alt="Picture Missing :(" />
+					<img className={styles.picture} src={`/pictures/enterprise/${member.shortName}.jpg`} alt="Picture Missing :(" />
 				</div>
 				<div className={styles.header}>
 					<h4 className={styles.name}>{member.name}</h4>
@@ -68,7 +68,7 @@ const Member: NextPage<Props> = ({ member }) => {
 			<Navbar logo="/logos/blce.svg" />
 			<div className={styles.card}>
 				<div className={styles['picture-wrapper']}>
-					<img className={styles.picture} src={`/pictures/${member.shortName}.jpg`} alt="Picture Missing :(" />
+					<img className={styles.picture} src={`/pictures/enterprise/${member.shortName}.jpg`} alt="Picture Missing :(" />
 				</div>
 				<div className={styles.text}>
 					<h4 className={styles.name}>{member.name}</h4>

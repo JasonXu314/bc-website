@@ -33,7 +33,7 @@ const Members: NextPage = () => {
 			{members.map((member) => (
 				<div key={member.name} className={styles['member-card']}>
 					<div className={styles['picture-wrapper']}>
-						<img className={styles.picture} src={`/pictures/${member.shortName}.jpg`} alt="Picture Missing :(" />
+						<img className={styles.picture} src={`/pictures/enterprise/${member.shortName}.jpg`} alt="Picture Missing :(" />
 					</div>
 					<Link href="/enterprise/leadership/[member]" as={`/enterprise/leadership/${member.shortName}`}>
 						<a className={styles.name}>{member.name}</a>
@@ -62,7 +62,7 @@ const Members: NextPage = () => {
 			{members.map((member) => (
 				<div key={member.name} className={styles['member-card']}>
 					<div className={styles['picture-wrapper']}>
-						<img className={styles.picture} src={`/pictures/${member.shortName}.jpg`} alt="Picture Missing :(" />
+						<img className={styles.picture} src={`/pictures/enterprise/${member.shortName}.jpg`} alt="Picture Missing :(" />
 					</div>
 					<div className={styles.text}>
 						<Link href="/enterprise/leadership/[member]" as={`/enterprise/leadership/${member.shortName}`}>
