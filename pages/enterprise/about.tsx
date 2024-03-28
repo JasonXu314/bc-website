@@ -14,8 +14,8 @@ const About: NextPage = () => {
 			<div className={styles.content}>
 				<h1 className={styles.title}>Based Enterprise</h1>
 				<p>
-					Based Enterprise is the venture capital branch of Brick Layer Capital. We are currently engaged with Rabbi Wine in real estate ventures in
-					the Galilee region.
+					Based Enterprise is the venture capital branch of Brick Layer Capital, dedicated to investing in the future of human standards. We are
+					currently engaged with Rabbi Wine in real estate ventures in the Galilee region.
 				</p>
 			</div>
 		</div>
