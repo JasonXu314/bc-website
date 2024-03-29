@@ -76,6 +76,9 @@ const Navbar: React.FC<Props> = ({ logo = '/logos/blc.svg' }) => {
 									<Link href="/enterprise/about">
 										<a className={`${styles['link-text']} ${styles.link}`}>About</a>
 									</Link>
+									<Link href="/enterprise/galilean-estates">
+										<a className={`${styles['link-text']} ${styles.link}`}>Galilean Estates</a>
+									</Link>
 									<Link href="/enterprise/leadership">
 										<a className={`${styles['link-text']} ${styles.link}`}>Members</a>
 									</Link>

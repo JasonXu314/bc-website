@@ -1,0 +1,17 @@
+@use '../vars';
+
+.main {
+	min-height: 100vh;
+	background: url('/galilee.jpg');
+	background-size: cover;
+	background-position: center;
+	overflow-y: scroll;
+	color: white;
+
+	.content {
+		margin: 2em 20%;
+		padding: 1em 5%;
+		backdrop-filter: blur(4px) brightness(0.6);
+	}
+}
+
