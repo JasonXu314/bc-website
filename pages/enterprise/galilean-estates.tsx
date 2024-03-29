@@ -20,7 +20,7 @@ const GalileanEstates: NextPage = () => {
 					Galilee.
 				</p>
 				<p>
-					We seek to increase human development and living standards in the often overlooked Galilean region of Northern Israel. Home to many Arabs,
+					We seek to increase human development and living standards in the often overlooked Galilean region of northern Israel. Home to many Arabs,
 					Druze, and increasingly Jews, the Galilee is set to be the stage for a new chapter of rapid human development in the diverse Levant.
 				</p>
 			</div>
