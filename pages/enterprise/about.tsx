@@ -13,10 +13,7 @@ const About: NextPage = () => {
 			<Navbar logo="/logos/blce.svg" />
 			<div className={styles.content}>
 				<h1 className={styles.title}>Based Enterprise</h1>
-				<p>
-					Based Enterprise is the venture capital branch of Brick Layer Capital, dedicated to investing in the future of human standards. We are
-					currently engaged with Rabbi Wine in real estate ventures in the Galilee region.
-				</p>
+				<p>Based Enterprise is the venture capital branch of Brick Layer Capital, dedicated to investing in the future of human standards.</p>
 			</div>
 		</div>
 	);
