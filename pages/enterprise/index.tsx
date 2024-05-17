@@ -14,7 +14,7 @@ const Index: NextPage = () => {
 			<div className={styles['description']}>
 				<h4 className={styles.title}>Based Enterprise</h4>
 				<i className={styles['text']}>
-					Based Enterprise is the business arm of Based Capital, LLC. focused on venture capital and joint private enterprise. Expect more soon!
+					Based Enterprise is the business arm of Brick Layer Capital, LLC. focused on venture capital and joint private enterprise. Expect more soon!
 				</i>
 			</div>
 		</div>

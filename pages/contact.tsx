@@ -56,12 +56,12 @@ const Contact: NextPage = () => {
 	return (
 		<div className={styles.main}>
 			<Head>
-				<title>Based Capital | Contact</title>
+				<title>Brick Layer Capital | Contact</title>
 			</Head>
 			<Navbar />
 			<div className={styles.content}>
 				<div className={styles.heading}>
-				If you are interested in getting in contact with us, use the form below — we will get back to you shortly!
+					If you are interested in getting in contact with us, use the form below — we will get back to you shortly!
 				</div>
 				<div className={styles.form}>
 					<Input
@@ -106,3 +106,4 @@ const Contact: NextPage = () => {
 };
 
 export default Contact;
+

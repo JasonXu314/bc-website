@@ -8,7 +8,7 @@ const Statements: NextPage = () => {
 	return (
 		<div className={styles.main}>
 			<Head>
-				<title>Based Capital | Statements</title>
+				<title>Brick Layer Capital | Statements</title>
 			</Head>
 			<Navbar />
 			<div className={styles.content}>

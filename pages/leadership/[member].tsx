@@ -29,7 +29,7 @@ const Member: NextPage<Props> = ({ member }) => {
 	return smol ? (
 		<div className={styles.main}>
 			<Head>
-				<title>{`Based Capital | ${member.name}`}</title>
+				<title>{`Brick Layer Capital | ${member.name}`}</title>
 			</Head>
 			<Navbar />
 			<div className={styles.card}>
@@ -61,7 +61,7 @@ const Member: NextPage<Props> = ({ member }) => {
 	) : (
 		<div className={styles.main}>
 			<Head>
-				<title>{`Based Capital | ${member.name}`}</title>
+				<title>{`Brick Layer Capital | ${member.name}`}</title>
 			</Head>
 			<Navbar />
 			<div className={styles.card}>

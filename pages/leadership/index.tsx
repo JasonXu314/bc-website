@@ -26,7 +26,7 @@ const Members: NextPage = () => {
 	return smol ? (
 		<div className={styles.main}>
 			<Head>
-				<title>Based Capital | Leadership</title>
+				<title>Brick Layer Capital | Leadership</title>
 			</Head>
 			<Navbar />
 			{members.map((member) => (
@@ -54,7 +54,7 @@ const Members: NextPage = () => {
 	) : (
 		<div className={styles.main}>
 			<Head>
-				<title>Based Capital | Leadership</title>
+				<title>Brick Layer Capital | Leadership</title>
 			</Head>
 			<Navbar />
 			{members.map((member) => (
