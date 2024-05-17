@@ -103,7 +103,7 @@ const Navbar: React.FC<Props> = ({ logo = '/logos/blc.svg' }) => {
 					</Link>
 				</li>
 				<li className={styles.link}>
-					<a href="https://www.linkedin.com/company/based-capital-llc" target="_blank" rel="noreferrer noopener" className={styles['link-text']}>
+					<a href="https://www.linkedin.com/company/brick-layer-capital" target="_blank" rel="noreferrer noopener" className={styles['link-text']}>
 						LinkedIn
 					</a>
 				</li>

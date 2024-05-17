@@ -11,7 +11,7 @@ const Index: NextPage = () => {
 	return (
 		<div className={styles.main}>
 			<Head>
-				<title>Based Capital</title>
+				<title>Brick Layer Capital</title>
 			</Head>
 			<Navbar />
 			<div className={styles.splash} ref={ref}>
