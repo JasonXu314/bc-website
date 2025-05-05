@@ -19,9 +19,10 @@ const Statement: React.FC<React.PropsWithChildren<Props>> = ({ date, children, b
 				<h4>{date}</h4>
 			)}
 			<div className={styles.part}>{children}</div>
-			<div className={styles.signature}>- The Based {branch} Team</div>
+			<div className={styles.signature}>- The Bricklayer {branch} Team</div>
 		</div>
 	);
 };
 
 export default Statement;
+
