@@ -15,7 +15,8 @@ export default [
 			'Alexander Levy is the Social Media Manager and Assistant-Accountant for Brick Layer Capital. His interests include volunteering, film, running, and medicine.',
 		description: `Alexander Levy is the Social Media Manager and Assistant-Accountant for Brick Layer Capital. His interests include volunteering, film, running, and medicine. He is currently studying Neuroscience on the Pre-Med track at Boston University.
 
-			His contributions include creating and managing all social media profiles and organization of financial analytics.`
+			His contributions include creating and managing all social media profiles and organization of financial analytics.`,
+		linkedIn: 'https://www.linkedin.com/in/alexllevy'
 	},
 	// {
 	// 	name: 'Rabbi Wine',
@@ -55,15 +56,14 @@ export default [
 
 		Jim's international business practice has included working with clients to acquire companies overseas and establish distribution and agency relationships, preparing and negotiating license and joint venture agreements, assisting with establishing companies overseas and advising clients regarding U.S. law compliance matters as they pertain to international business transactions.
 		`
-	},
-	{
-		name: 'Solomon (Shlomo) Knopf',
-		shortName: 'solomon',
-		position: 'Venture Partner',
-		shortDescription: 'Solomon Knopf brings his 36 years of experience in real estate and his experience of living and working in Israel.',
-		description: `
-		Solomon Knopf has a rich background in real estate in the United States, having brokered real estate in New York City as a partner for PAL Royalty and founded his own brokerage firm, First Commonwealth Investment Company, dealing in the management and improvement of properties for various purposes, including corporate office buildings. He has previously worked in Israel, and will be using his vast experience to guide the joint venture.
-		`
 	}
+	// {
+	// 	name: 'Solomon (Shlomo) Knopf',
+	// 	shortName: 'solomon',
+	// 	position: 'Venture Partner',
+	// 	shortDescription: 'Solomon Knopf brings his 36 years of experience in real estate and his experience of living and working in Israel.',
+	// 	description: `
+	// 	Solomon Knopf has a rich background in real estate in the United States, having brokered real estate in New York City as a partner for PAL Royalty and founded his own brokerage firm, First Commonwealth Investment Company, dealing in the management and improvement of properties for various purposes, including corporate office buildings. He has previously worked in Israel, and will be using his vast experience to guide the joint venture.
+	// 	`
+	// }
 ] as Member[];
-
