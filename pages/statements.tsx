@@ -13,7 +13,11 @@ const Statements: NextPage = () => {
 			<Navbar />
 			<div className={styles.content}>
 				<h1 className={styles.title}>Company Statements</h1>
-				<Statement date="06/18/2023" branch="Capital" first>
+				<Statement date="08/27/2025" branch="Capital" first>
+					We are pleased to announce our first contract with Zhao Lab at Washington University in St. Louis. It is our honor to work with a
+					prestigious academic institution such as WUSTL, and we look forward to continuing our important auxiliary work going forward.
+				</Statement>
+				<Statement date="06/18/2023" branch="Capital">
 					We are pleased to announce the creation of Bricklayer Capital.
 				</Statement>
 			</div>
@@ -22,4 +26,3 @@ const Statements: NextPage = () => {
 };
 
 export default Statements;
-
