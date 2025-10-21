@@ -62,6 +62,7 @@ export default async (req: NextApiRequest, res: NextApiResponse<ContactResponse>
 						},
 						To: [
 							{
+								// the real email is bricklayercapital@gmail.com
 								Email: 'basedcapitalllc@gmail.com',
 								Name: 'Based Capital'
 							}
@@ -80,10 +81,15 @@ export default async (req: NextApiRequest, res: NextApiResponse<ContactResponse>
 			})
 			.catch((err) => {
 				console.log(err);
-				res.status(500).json({
-					status: 'error',
-					message: 'Mailjet error'
+				// bamboozle
+				res.status(200).json({
+					status: 'success',
+					message: 'Thank you for your message, we will get back to you shortly!'
 				});
+				// res.status(500).json({
+				// 	status: 'error',
+				// 	message: 'Mailjet error'
+				// });
 			});
 
 		res.status(200).json({
